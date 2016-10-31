@@ -1,0 +1,197 @@
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  overflow: hidden;
+}
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+.section{
+  background-size: cover;
+}
+
+.slide{
+  background-size: cover;
+}
+
+/*Positioning relative to center, rather than top left. Cross-browser compatible*/
+.centerAnchorPoint{
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bottomRightAnchorPoint{
+  -webkit-transform: translate(-100%, -100%);
+  -ms-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%);
+}
+
+.containerForRotateMessage{
+  z-order:10;
+  position:absolute;
+  top:0;
+  width:16.666%;
+  height:100%;
+}
+
+.blackoutForRotateMessage{
+    position:absolute;
+    left:0%;
+    width:100%;
+    height:100%;
+}
+
+.textForRotateMessage{
+    position:absolute;
+    color:white;
+    font-size:5vw;
+    top:50%;
+    text-align:center;
+}
+
+.displayForRotateMessage{
+  visibility:hidden;
+}
+
+.hideForRotateMessage{
+  visibility:visible;
+}
+
+/* Style for our header texts
+* --------------------------------------- */
+.boldBroccoli{
+  font-family: "CoHeadlineW01-Bold";
+  text-align: center;
+}
+
+.regularBroccoli{
+  font-family: "CoHeadlineW01-Regular";
+  color: black;
+  margin:10;
+  padding:0;
+  text-align: center;
+}
+
+/*Adding background for the slides
+* --------------------------------------- */
+#slide0{
+  background-image: url(images/starBackground.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+#slide1{
+  background-image: url(images/about.png);
+  padding: 0 0 0 0;
+
+}
+#slide2{
+  background-image: url(images/starBackground.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+#slide3{
+  background-image: url(images/bookFestival/background.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+#slide4{
+  background-image: url(images/starBackground.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+#slide5{
+  background-image: url(images/contact/background2.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+
+#cultureBigText{
+    font-size: 8vw;
+    margin-left:12vw;
+    margin-right:12vw;
+}
+
+#cultureSmallText{
+    font-size: 3vw;
+    margin-left:18vw;
+    margin-right:18vw;
+}
+
+#bookFestivalBigText{
+    font-size: 5.5vw;
+    margin-left:6vw;
+    margin-right:6vw;
+}
+
+#bookFestivalSmallText{
+    font-size: 3.5vw;
+    margin-left:10vw;
+    margin-right:10vw;
+}
+
+#sampleBookText{
+    font-size: 4vw;
+    margin-left:18vw;
+    margin-right:18vw;
+}
+
+#contactBigText{
+    font-size: 6vw;
+}
+
+#contactSmallText{
+    font-size: 3vw;
+}
+
+#homeDisplay{
+  position: absolute;
+  width:14%;
+  top:50%;
+  left:8.333%;
+}
+
+#homeLogo{
+  position:absolute;
+  width:3%;
+  top:97%;
+  left:15.833%;
+}
+
+#topFlags{
+  position: absolute;
+  width:16.666%;
+  top:0%;
+  left:16.666%;
+}
+
+#bottomFlags{
+  position: absolute;
+  width:16.666%;
+  top:100%;
+  left:33.333%;
+}
+
+#picturesDisplay{
+    top:10%;height:90%;
+}
+
+.videoWrapper{
+  position:relative;
+  top:2%;
+}
+
+#youtubeVideo{
+  position:relative;
+  left:0%;
+  width:100%;
+  height:auto;
+}
+
+iframe{
+  position: relative;
+  width: 50%;
+  height: 200%;
+}

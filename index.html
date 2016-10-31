@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Brocolli: Digital Storybooks for Children</title>
+        <meta name="author" content="Wonjin Park" />
+        <meta name="description" content="Digital storybooks telling diverse stories " />
+        <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+        <meta name="Resource-type" content="Document" />
+
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="examples.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <!--        font related-->
+        <script src="https://use.typekit.net/hjg3xmi.js"></script>
+        <script>
+            if (screen.width <= 699) {
+                document.location.href = "http://m.playbroccoli.com/";
+            }
+          try{Typekit.load({ async: true });}catch(e){}
+        </script>
+        <!--        <link href="//db.onlinewebfonts.com/c/d8dabc37c8fae7c50c75282fe8f6c2fb?family=CoHeadlineW01-Bold" rel="stylesheet" type="text/css"/>-->
+
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <style>
+
+            /* Style for our header texts
+            * --------------------------------------- */
+            h1{
+                font-size: 4.0em;
+                font-family: "CoHeadlineW01-Bold";
+                color: black;
+                margin:0;
+                padding:0;
+                text-align: left;
+            }
+
+            h2{
+                font-size: 1.5em;
+                font-family: "CoHeadlineW01-Regular";
+                color: black;
+                margin:10;
+                padding:0;
+                text-align: left;
+            }
+
+
+            .videoWrapper{
+                position:relative;
+                top:2%;
+            }
+
+            #youtubeVideo{
+                position:relative;
+                /*                top:20%;*/
+                left:0%;
+                width:100%;
+                height:auto;
+            }
+
+
+
+            /*
+
+            video#bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-62.50%);
+            background: url(polina.jpg) no-repeat;
+            background-size: cover;
+            }
+            */
+
+            /*
+            iframe {
+            position: fixed;
+            top: 10%;
+            width: 50%;
+            max-width: 750px;
+            left: 45%;
+            height: 50%;
+            min-height: 50px;
+            }
+            */
+
+            videoContainer{
+
+
+                width: 300px;
+                height: 600px;
+            }
+
+            iframe{
+                position: relative;
+                width: 50%;
+                height: 200%;
+                /*
+                position: fixed;
+                top: 10%;
+                width: 50%;
+                max-width: 750px;
+                left: 44.85%;
+                height: 50%;
+                */
+                /*                min-height: 50px;*/
+            }
+
+
+            #btnContainer{
+                position: relative;
+                left: 20%;
+            }
+
+            #sampleSubtitle{
+                font-size: 1.25vw;
+                font-weight: bold;
+                font-family: "CoHeadlineW01-Bold";
+            }
+
+            .btn {
+                font-size: 1.5vw;
+                font-weight: bold;
+                font-family: "CoHeadlineW01-Bold";
+                font-weight: 700;
+                letter-spacing: 0px;
+                width: 22%;
+                /*                min-width: 300px;*/
+            }
+
+            .btn-default {
+                background: transparent !important;
+                color: black;
+                white-space:normal;
+                padding: 20px 40px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                border: 3px solid black;
+                border-radius: 30px;
+            }
+
+            .btn-default:hover {
+                background: orange !important;
+                color: white;
+                white-space: normal;
+                padding: 20px 40px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                border: 3px solid white;
+                border-radius: 30px;
+            }
+
+            /* Centered texts in each section
+            * --------------------------------------- */
+            .section{
+                text-align:center;
+                overflow: hidden;
+            }
+
+            /* Layer with position absolute in order to have it over the video
+            * --------------------------------------- */
+            /*
+            #section0 .layer{
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            left: 0;
+            top: 43%;
+            }
+            */
+
+            /* Backgrounds will cover all the section
+            * --------------------------------------- */
+            .section{
+                background-size: cover;
+            }
+
+            .slide{
+                background-size: cover;
+            }
+
+            /* Defining each section background and styles
+            * --------------------------------------- */
+            #section1{
+                /*
+                background-image: url(images/home.png);
+                padding: 0 0 0 0;
+                */
+            }
+
+            #section3 h1{
+                color: #000;
+            }
+
+            /*Adding background for the slides
+            * --------------------------------------- */
+            #slide0{
+                background-image: url(images/starBackground.png);
+                padding: 0 0 0 0;
+            }
+            #slide1{
+                background-image: url(images/about.png);
+                padding: 0 0 0 0;
+
+            }
+            #slide2{
+                background-image: url(images/book.png);
+                padding: 0 0 0 0;
+            }
+            #slide3{
+                background-image: url(images/starBackground.png);
+                padding: 0 0 0 0;
+            }
+            #slide4{
+                background-image: url(images/contact/background.png);
+                padding: 0 0 0 0;
+            }
+
+            /*Positioning relative to center, rather than top left. Cross-browser compatible*/
+            .centerAnchorPoint{
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+
+        </style>
+
+        <!--[if IE]>
+<script type="text/javascript">
+var console = { log: function() {} };
+</script>
+<![endif]-->
+
+
+        <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <script type="text/javascript" src="examples.js"></script>
+
+
+
+        <script type="text/javascript">
+            //            $(document).ready(function() {
+            //                $('#fullpage').fullpage({
+            //                    verticalCentered: false
+            //                });
+            //            });
+
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    menu: '#menu',
+                    anchors: ['main'],// anchors: ['main', 'secondPage', 'thirdPage','fourthPage'],
+                    autoScrolling: false,
+                    scrollOverflow: true
+                });
+
+                //                $('#ul li').click(function(){
+                //                    $('#ul li').removeClass('active');
+                //                    //                    $(this).addClass('active');
+                //                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+
+        <!--
+<nav class="navbar navbar-fixed-top navbar-inverse">
+<div class="container-fluid">
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul id="menu" class="nav navbar-nav">
+
+</ul>
+</div>
+</div>
+</nav>
+-->
+
+        <nav id="navbar" class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="ul" class="nav navbar-nav">
+                        <li data-menuanchor="firstPage"><a href="#main">Home</a></li>
+                        <li data-menuanchor="secondPage"><a href="#main/about">About</a></li>
+                        <li data-menuanchor="thirdPage"><a href="#main/bookfestival">2015 BOOK FESTIVAL</a></li>
+                        <li data-menuanchor="fourthPage"><a href="#main/sample">SAMPLE BOOK</a></li>
+                        <li data-menuanchor="fifthPage"><a href="#main/contact">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div id="fullpage">
+            <div class="section " id="section0">
+                <div class="slide" id="slide0"/>
+                    <div class="container">
+                        <img src="images/home/kids.png" class="centerAnchorPoint" style="position: absolute; width:15%; top:50%; left:10%;">
+                        <img src="images/home/centerText.png" class="centerAnchorPoint" style="position: absolute; width:10%; top:50%; left:10%;">
+                    </div>
+                </div>
+
+                <div class="slide" id="slide1" data-anchor="about">
+                    <div class="container vertical-center">
+                        <div style="width: 30%; float:left; overflow: scroll;">
+                            <h1 align="left">
+                                Focusing on the Culture
+                            </h1>
+                            <h2 align="left">
+                                We collect traditional stories from all over the world. Our mission is to let
+                                children learn about different cultures and customs freely without any
+                                limitations. We believe understanding each other is the first step to uniting
+                                diverse people into one community.
+                            </h2>
+                            <h2>
+                                Our books are available in six languages. The languages include English, Spanish, French, Chinese, Japanese, and Korean. We also provide audio in all six languages. In near future, we are planning to add Hebrew and Arabic!
+                            </h2>
+                        </div>
+                        <div style="width: 60%; float:right; margin-top: 5%">
+                            <img src="images/ipad.png" width=100%>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            <div class="slide" id="slide2" data-anchor="bookfestival">
+                <div class="videoWrapper" >
+                    <iframe id="youtubeVideo" src="http://player.vimeo.com/video/168554051" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!--                    <iframe id="youtubeVideo" src="http://player.vimeo.com/video/168554051" frameborder="0" allowfullscreen></iframe>-->
+<!--                <div style="width: 60%;margin: auto">-->
+                <div>
+                    <h2 style="text-align: center;">
+                        We have participated in 2015 Boston Book Festival.<br>
+                        We will be participating in 2016 Boston Book Festival.<br>
+                        Check out the video!
+                    </h2>
+                </div>
+                <!--
+<div id="videoContainer" >
+
+<video id="bgvid">
+<source src="http://player.vimeo.com/video/168554051" >
+</video>
+
+
+
+</div>
+-->
+            </div>
+
+            <div class="slide" id="slide3" data-anchor="sample">
+                <div class="centerAnchorPoint" style="position:absolute; border-top:2px solid #383838; border-bottom:2px solid #383838; top:50%; left:70%; width:13%; height:45%;">
+                    <img src="images/sample/book-compressor.png" class="centerAnchorPoint" style="position:absolute; left:25%; top:50%; max-width:25%;">
+                    <div id="btnContainer">
+                        <a class="btn btn-default" href="http://www.dmook.co.kr/gallery/view.asp?seq=279713&path=150507072416" target="_blank" role="button">Read our sample book</a>
+                        <div id="sampleSubtitle" class="sample">Click to read our sample book!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide4" data-anchor="contact">
+                <div class="centerAnchorPoint" style="position:absolute; border-top:2px solid #383838; border-bottom:2px solid #383838; top:50%; left:90%; width:12%;">
+                    <br/><br/><br/>
+                    <div style="font-size: 2vw; font-weight: bold; font-family: "CoHeadlineW01-Bold";">Contact us!</div>
+                    <br/><br/>
+                    <div>Do you have a question? A suggestion? Great!<br/>Send us an email to <a href="mailto:hello@playbroccoli.com">hello@playbroccoli.com</a></div>
+                    <br/><br/><br/>
+                </div>
+            </div>
+
+
+            <!--
+<video autoplay loop muted id="myVideo">
+<source src="images/looping video medium quality.mp4" type="video/mp4">
+</video>
+-->
+
+
+        </div>
+
+
+        <!--                <div class="slide" id="slide5"></div>-->
+
+        </div>
+
+    </body>
+</html>

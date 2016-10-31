@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Brocolli: Digital Storybooks for Children</title>
+        <meta name="author" content="Wonjin Park" />
+        <meta name="description" content="Digital storybooks telling diverse stories for children." />
+        <meta name="keywords"  content="app,storybook,voiceover,culture,book,children,kids" />
+        <meta name="Resource-type" content="Document" />
+        <link rel="canonical" href="http://www.playbroccoli.com/"/>
+
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="examples.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+
+
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" type="text/css" href="broccoliStyle.css"/>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <!--        font related-->
+        <script src="https://use.typekit.net/hjg3xmi.js"></script>
+        <script>
+          try{Typekit.load({ async: true });}catch(e){}
+        </script>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <script type="text/javascript" src="examples.js"></script>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    menu: '#menu',
+                    anchors: ['main'],
+                    autoScrolling: false,
+                    scrollOverflow: true
+                });
+
+            });
+            $(document).ready(correctForRotation);
+            $( window ).on( "orientationchange", function( event ) {
+                correctForRotation();
+            });
+            function correctForRotation(){
+                if(window.orientation == 0){
+                    $( ".displayForRotateMessage" ).css( "visibility", "hidden");
+                    $( ".hideForRotateMessage" ).css( "visibility", "visible");
+                }else{
+                    $( ".displayForRotateMessage" ).css( "visibility", "visible");
+                    $( ".hideForRotateMessage" ).css( "visibility", "hidden");
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        </div>
+        <nav id="navbar" class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="ul" class="nav navbar-nav">
+                        <li data-menuanchor="firstPage"><a href="#main">Home</a></li>
+                        <li data-menuanchor="secondPage"><a href="#main/about">About</a></li>
+                        <li data-menuanchor="thirdPage"><a href="#main/pictures">Pictures</a></li>
+                        <li data-menuanchor="fourthPage"><a href="#main/bookfestival">2015 BOOK FESTIVAL</a></li>
+                        <li data-menuanchor="fifthPage"><a href="#main/sample">SAMPLE BOOK</a></li>
+                        <li data-menuanchor="sixthPage"><a href="#main/contact">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div id="fullpage">
+            <div class="section " id="section0">
+
+                <div class="slide" id="slide0"/>
+                    <div class="container">
+                        <img src="images/home/home.png" class="centerAnchorPoint" id="homeDisplay">
+                        <img src="images/home/logo.png" class="bottomRightAnchorPoint" id="homeLogo">
+                    </div>
+                    <div class="displayForRotateMessage containerForRotateMessage" style="left:0%;">
+                        <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                        <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide1" data-anchor="about">
+                    <img src="images/about/topFlags.png" id="topFlags">
+                    <div class="boldBroccoli" id="cultureBigText">
+                        Focusing on the Culture
+                    </div>
+                    <div class="regularBroccoli" id="cultureSmallText">
+                        We collect traditional stories from all over the world. Our mission is to let
+                        children learn about different cultures and customs freely without any
+                        limitations. We believe understanding each other is the first step to uniting
+                        diverse people into one community.
+                    </div>
+                    <div class="regularBroccoli" id="cultureSmallText">
+                        Our books are available in six languages. The languages include English, Spanish, French, Chinese, Japanese, and Korean. We also provide audio in all six languages.
+                    </div>
+                    <img src="images/about/bottomFlags.png" class="bottomRightAnchorPoint" id="bottomFlags">
+                    <div class="displayForRotateMessage containerForRotateMessage" style="width:100%;">
+                        <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                        <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide2" data-anchor="pictures">
+                    <div class="displayForRotateMessage containerForRotateMessage" style="left:33.333%;">
+                        <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                        <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                    </div>
+                    <img src="images/pictures/background.png" id="picturesDisplay">
+                </div>
+
+
+
+
+            <div class="slide" id="slide3" data-anchor="bookfestival">
+                <div class="boldBroccoli" id="bookFestivalBigText">2016 Boston Book Festival</div>
+                </br>
+                <div class="videoWrapper" >
+                    <iframe id="youtubeVideo" class="hideForRotateMessage" src="http://player.vimeo.com/video/168554051" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </br>
+                <div class="regularBroccoli" id="bookFestivalSmallText">
+                    We have participated in 2016 Boston hubbub Book Festival. Check out the video!
+                </div>
+                <div class="displayForRotateMessage containerForRotateMessage" style="width:100%;">
+                    <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                    <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide4" data-anchor="sample">
+
+                  <div class="displayForRotateMessage containerForRotateMessage" style="left:66.666%;">
+                      <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                      <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                  </div>
+                <img src="images/sample/googlePlay.png">
+                <div class="boldBroccoli" id="sampleBookText">
+                    </br>
+                    Our book will soon be available on Apple Appstore.
+                </div>
+            </div>
+
+            <div class="slide" id="slide5" data-anchor="contact">
+                  <div class="displayForRotateMessage containerForRotateMessage" style="left:83.333%;">
+                      <img src="images/blackPixel.png" class="blackoutForRotateMessage">
+                      <div class="boldBroccoli textForRotateMessage">Please rotate your device.</div>
+                  </div>
+                <div>
+                    <br/><br/><br/>
+                    <div class="boldBroccoli" id="contactBigText">Contact Us!</div>
+                    <br/><br/>
+                    <div class="boldBroccoli" id="contactSmallText">Do you have a question? A suggestion? Great!<br/>Send us an email to <a href="mailto:hello@playbroccoli.com">hello@playbroccoli.com</a></div>
+                    <br/><br/><br/>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+    </body>
+</html>
