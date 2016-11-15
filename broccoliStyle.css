@@ -205,3 +205,43 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+    .topRightAnchorPoint{
+      -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+      transform: translate(-100%, -50%);
+    }
+
+    #closableForeground{
+      position:absolute;
+      left:10%;
+      height:100%;
+      width:20%;
+      background-color:rgba(0, 0, 0, 0.5);
+    }
+
+    #frontPagePlayLogoAnchor{
+      position: absolute;
+      width:100%;
+      top:28%;
+      left:0%;
+    }
+    #frontPagePlayLogoImage{
+      position: absolute;
+      width:57%;
+    }
+
+    #newReleasePoster{
+       position: absolute;
+       height:90%;
+       top:54%;
+       left:50%;
+    }
+
+    #closeButton{
+      position: absolute;
+      border: none;
+      height:4.5%;
+      top:-45%;
+      left:42%;
+      background-color: rgba(0, 0, 0, 0);
+    }

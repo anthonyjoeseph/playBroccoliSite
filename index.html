@@ -3,7 +3,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Brocolli: Digital Storybooks for Children</title>
+        <title>Broccoli: Digital Storybooks for Children</title>
         <meta name="author" content="Wonjin Park" />
         <meta name="description" content="Digital storybooks telling diverse stories for children." />
         <meta name="keywords"  content="app,storybook,voiceover,culture,book,children,kids" />
@@ -62,6 +62,10 @@ var console = { log: function() {} };
                     scrollOverflow: true
                 });
 
+                $('#closeButton').click(function(){
+                    $("#closableForeground").hide();
+                });
+
                 //                $('#ul li').click(function(){
                 //                    $('#ul li').removeClass('active');
                 //                    //                    $(this).addClass('active');
@@ -108,6 +112,15 @@ var console = { log: function() {} };
                     <div class="container">
                         <img src="images/home/kids.png" alt="children" class="centerAnchorPoint" style="position: absolute; width:15%; top:50%; left:10%;">
                         <img src="images/home/centerText.png" alt="broccoli logo display" class="centerAnchorPoint" style="position: absolute; width:10%; top:50%; left:10%;">
+                        <div class="centerAnchorPoint" id="closableForeground">
+                            <div id="newReleasePoster">
+                                <img src="images/home/firstBookPoster.png" alt="first book release poster" class="centerAnchorPoint" style="height:100%;" />
+                                <a href="
+                                        https://play.google.com/store/apps/details?id=com.dreammug.donghwa&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1
+                                " id="frontPagePlayLogoAnchor" class="centerAnchorPoint"><img src="images/googlePlay.png" id="frontPagePlayLogoImage" class="centerAnchorPoint" alt="google play store logo"></a>
+                                <button id="closeButton" class="centerAnchorPoint"><img src="images/home/closeButton.png" alt="close button for promotional poster" style="height:100%;"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -120,7 +133,7 @@ var console = { log: function() {} };
                             <h2 align="left">
                               We are a New York based start-up company. We collect traditional stories from all over the world. Our mission is to educate
                               children about different cultures and let them know that reading is another fun activity that they can do on digital devices.
-                              We believe that understanding each other is the first step to uniting diverse people into one community.  
+                              We believe that understanding each other is the first step to uniting diverse people into one community.
 
                             </h2>
                             <h2>
@@ -163,12 +176,10 @@ var console = { log: function() {} };
             </div>
 
             <div class="slide" id="slide3" data-anchor="sample">
-                <div class="centerAnchorPoint" style="position:absolute; border-top:2px solid #383838; border-bottom:2px solid #383838; top:50%; left:70%; width:13%; height:45%;">
-                    <img src="images/sample/book-compressor.png" alt="beautiful open book" class="centerAnchorPoint" style="position:absolute; left:25%; top:50%; max-width:25%;">
-                    <div id="btnContainer">
-                        <a class="btn btn-default" href="http://www.dmook.co.kr/gallery/view.asp?seq=279713&path=150507072416" target="_blank" role="button">Read our sample book</a>
-                        <div id="sampleSubtitle" class="sample">Click to read our sample book!</div>
-                    </div>
+                <a href='https://play.google.com/store/apps/details?id=com.dreammug.donghwa&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' width=400 src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                <div class="boldBroccoli" id="sampleBookText" style="font-family: CoHeadlineW01-Bold; text-align: center; font-size: 1.5em;">
+                    </br>
+                    Our book will soon be available on Apple Appstore.
                 </div>
             </div>
 

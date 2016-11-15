@@ -78,31 +78,37 @@
 /*Adding background for the slides
 * --------------------------------------- */
 #slide0{
+  background-image: url(images/firstBookPoster/firstBookPoster.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+
+#slide1{
   background-image: url(images/starBackground.png);
   background-size: 100% 100%;
   padding: 0 0 0 0;
 }
-#slide1{
+#slide2{
   background-image: url(images/about.png);
   padding: 0 0 0 0;
 
 }
-#slide2{
-  background-image: url(images/starBackground.png);
-  background-size: 100% 100%;
-  padding: 0 0 0 0;
-}
 #slide3{
-  background-image: url(images/bookFestival/background.png);
+  background-image: url(images/starBackground.png);
   background-size: 100% 100%;
   padding: 0 0 0 0;
 }
 #slide4{
-  background-image: url(images/starBackground.png);
+  background-image: url(images/bookFestival/background.png);
   background-size: 100% 100%;
   padding: 0 0 0 0;
 }
 #slide5{
+  background-image: url(images/starBackground.png);
+  background-size: 100% 100%;
+  padding: 0 0 0 0;
+}
+#slide6{
   background-image: url(images/contact/background2.png);
   background-size: 100% 100%;
   padding: 0 0 0 0;
@@ -146,36 +152,48 @@
     font-size: 3vw;
 }
 
+#frontPageBadgeAnchor{
+    position: absolute;
+    top:78%;
+    width:calc(100% / 7);
+}
+
+#frontPageBadgeImage{
+    position: absolute;
+    width: 54%;
+}
+
 #homeDisplay{
   position: absolute;
   width:14%;
   top:50%;
-  left:8.333%;
+  left: calc(((100% / 7) * 2) - (100% / 7 / 2));
 }
 
 #homeLogo{
   position:absolute;
   width:3%;
   top:97%;
-  left:15.833%;
+  left:calc(((100% / 7) * 2) - (100% / 7 / 20));
 }
 
 #topFlags{
   position: absolute;
-  width:16.666%;
+  width:calc(100% / 7);
   top:0%;
-  left:16.666%;
+  left:calc((100% / 7) * 2);
 }
 
 #bottomFlags{
   position: absolute;
-  width:16.666%;
+  width:calc(100% / 7);
   top:100%;
-  left:33.333%;
+  left:calc((100% / 7) * 3);
 }
 
 #picturesDisplay{
-    top:10%;height:90%;
+    top:10%;
+    height:90%;
 }
 
 .videoWrapper{
