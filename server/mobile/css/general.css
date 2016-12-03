@@ -1,0 +1,96 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "jaf-domus-titling-web";
+}
+body {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    font-family: "jaf-domus-titling-web";
+}
+
+.h4 {
+    float: left;
+}
+
+.wf-loading {
+    visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+    visibility: visible;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  overflow: hidden;
+    background-size: cover;
+}
+
+.slide{
+  background-size: cover;
+}
+
+/*Positioning relative to center, rather than top left. Cross-browser compatible*/
+.centerAnchorPoint{
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bottomRightAnchorPoint{
+  -webkit-transform: translate(-100%, -100%);
+  -ms-transform: translate(-100%, -100%);
+  transform: translate(-100%, -100%);
+}
+
+.containerForRotateMessage{
+  z-order:10;
+  position:absolute;
+  top:0;
+  width:16.666%;
+  height:100%;
+}
+
+.blackoutForRotateMessage{
+    position:absolute;
+    left:0%;
+    width:100%;
+    height:100%;
+}
+
+.textForRotateMessage{
+    position:absolute;
+    color:white;
+    font-size:5vw;
+    top:50%;
+    text-align:center;
+}
+
+.displayForRotateMessage{
+  visibility:hidden;
+}
+
+.hideForRotateMessage{
+  visibility:visible;
+}
+
+/* Style for our header texts
+* --------------------------------------- */
+.boldBroccoli{
+  font-family: "co-headline";
+  font-weight: 700;
+  text-align: center;
+}
+
+.regularBroccoli{
+  font-family: "co-headline";
+  font-weight: 400;
+  color: black;
+  margin:10;
+  padding:0;
+  text-align: center;
+}

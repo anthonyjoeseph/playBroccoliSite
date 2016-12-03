@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Broccoli - Digital Story Books for Children</title>
+      <meta name="author" content="Wonjin Park" />
+      <meta name="description" content="Digital storybooks telling diverse stories for children." />
+      <meta name="keywords"  content="app,storybook,voiceover,culture,book,children,kids" />
+      <meta name="Resource-type" content="Document" />
+
+      <!--live reload-->
+      <script src="//localhost:35729/livereload.js"></script>
+
+      <!--font related-->
+      <script src="https://use.typekit.net/hjg3xmi.js"></script>
+      <script>
+          if (screen.width <= 699) {
+              document.location.href = "http://m.playbroccoli.com/";
+          }
+        try{Typekit.load({async: true});}catch(e){}
+      </script>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
+      <link rel="stylesheet" type="text/css" href="css/general.css" />
+      <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+      <link rel="stylesheet" type="text/css" href="css/slides.css" />
+
+      <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+      <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+      <!-- Google Analytics Script -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87584570-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#homepage-poster-yellow-container").click(function() {
+                window.location = "https://play.google.com/store/apps/details?id=com.broccoli.millstone&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1";
+                return false;
+              });
+              $('#fullpage').fullpage({
+                  anchors: ['main'],
+                  autoScrolling: false,
+                  scrolloverflow:true
+              });
+              $('#closeButton').click(function(){
+                  $("#closableForeground").hide();
+              });
+          });
+      </script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="slide" id="slide0"/>
+          <div id="homepage-center">
+            <div id="homepage-poster-container">
+              <div id="homepage-poster-redblue-container">
+                <img id="homepage-poster-redblue-image" src="images/home/freeBookRedBlue.png">
+              </div>
+              <div id="homepage-poster-yellow-container">
+                <img id="homepage-poster-yellow-image" src="images/home/freeBookYellow.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="slide1" data-anchor="about">
+          <div class="flexContainer" id="aboutUsContainer">
+            <div id="aboutUsText">
+              <h1>
+                Focusing On the Culture
+              </h1>
+              </br>
+              <h2>
+                We are Broccoli! We are a New York based start-up company.
+                We collect traditional stories from all over the world.
+                Our mission is to educate children about different
+                cultures and let them know that reading is another
+                fun activity that they can do on digital devices. We
+                believe that understanding each other is the first step
+                to uniting diverse people into one community.
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="slide2" data-anchor="bookfestival">
+          <div class="flexContainer" id="picturesPageContainer">
+            <div style="flex:3; display:flex; flex-flow:row; justify-content:center; align-items:flex-end;">
+              <h1 style="color:white; text-shadow: 4px 4px 16px #000000; width:55%; margin-bottom:20px;">
+                2016 Boston Book Festival
+              </h1>
+            </div>
+            <div id="videoWrapper">
+              <iframe id="youtubeVideo" src="https://www.youtube.com/embed/XiWH6npRyoY" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div style="flex:2; display:flex; flex-flow:row; justify-content:center; align-items:flex-start;">
+              <h2 style="color:white; width:35%;">
+                We Have Participated in 2016 Boston Hubbub Book Festival. Check out the video!
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="slide3" data-anchor="contact">
+          <div id="socialMediaContainer">
+            <div class="socialMediaItem"><!-- spacer --></div>
+            <a href="https://www.instagram.com/broccoli_app/" class="socialMediaItem">
+              <img src="images/contact/instagram.png" style="width:100%;"/>
+            </a>
+            <a href="mailto:hello@playbroccoli.com" class="socialMediaItem" >
+              <img src="images/contact/email.png" style="width:100%;" />
+            </a>
+            <a href="https://www.facebook.com/Broccoli-193559324409522/" class="socialMediaItem" >
+              <img src="images/contact/facebook.png" style="width:100%;" />
+            </a>
+            <div class="socialMediaItem"><!-- spacer --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

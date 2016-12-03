@@ -1,0 +1,57 @@
+/* Typekit safety checking (?)*/
+
+.wf-loading {
+    visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+    visibility: visible;
+}
+
+/*Positioning relative to center, rather than top left. Cross-browser compatible*/
+.centerAnchorPoint{
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.topRightAnchorPoint{
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.section{
+    text-align:center;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.slide{
+    background-size: cover;
+}
+
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+    font-size: 4.0em;
+    font-family: "co-headline", sans-serif;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+}
+
+h2{
+    font-size: 1.5em;
+    font-family: "co-headline", sans-serif;
+    font-weight: 400;
+    margin:10;
+    padding:0;
+}
+
+
+body {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    font-family: "jaf-domus-titling-web";
+}
