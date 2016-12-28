@@ -1,0 +1,175 @@
+/*Adding background for the slides
+* --------------------------------------- */
+#slide1{
+    background-image: url(../images/about/background.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(117, 197, 150);
+    padding: 0 0 0 0;
+}
+#slide2{
+    background-image: url(../images/bookFestival/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 0 0;
+}
+#slide3{
+  background-color: rgb(251, 242, 228);
+  padding: 0 0 0 0;
+}
+
+.flexContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height:100%;
+}
+
+
+#videoWrapper{
+    -webkit-box-flex:4;
+        -ms-flex:4;
+            flex:4;
+
+    display:-webkit-box;
+
+    display:-ms-flexbox;
+
+    display:flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+#youtubeVideo{
+    position:relative;
+    left:0%;
+    width:45%;
+    height:100%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#homepage-center{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-flow: column;
+
+      flex-flow: column;
+
+  -webkit-box-pack: center;
+
+      -ms-flex-pack: center;
+
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  width:100%;
+  height:100%;
+}
+
+#homepage-poster-container {
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  -ms-flex-flow: row;
+
+      flex-flow: row;
+
+  -webkit-box-pack: stretch;
+
+      -ms-flex-pack: stretch;
+
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#homepage-poster-redblue-container {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+#homepage-poster-redblue-image{
+  width: 100%;
+}
+
+#homepage-poster-yellow-container {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+#homepage-poster-yellow-image {
+  width: 100%;
+}
+
+#aboutUsContainer{
+  -ms-flex-flow:column;
+      flex-flow:column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#aboutUsText{
+  width:50%;
+
+  text-align:center;
+  color:white;
+}
+
+
+#picturesPageContainer{
+    -ms-flex-flow: column;
+        flex-flow: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+#socialMediaContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height:100%;
+}
+
+.socialMediaItem{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width:13%;
+}

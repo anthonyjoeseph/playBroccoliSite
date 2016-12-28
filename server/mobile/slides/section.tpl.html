@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            menu: '#menu',
+            anchors: ['main'],
+            autoScrolling: false,
+            verticalCentered: false,
+            scrollOverflow: true,
+            controlArrows: false
+        });
+
+        //load slides
+        $('#slide0').load('slides/slide0.tpl.html');
+        $('#slide1').load('slides/slide1.tpl.html');
+        $('#slide2').load('slides/slide2.tpl.html');
+        $('#slide3').load('slides/slide3.tpl.html');
+        $('#slide4').load('slides/slide4.tpl.html');
+
+        $(window).bind("load", function() {
+          correctForRotation();
+        });
+
+        $( window ).on( "orientationchange", function( event ) {
+          correctForRotation();
+        });
+    });
+    function correctForRotation(){
+        if(window.orientation == 0){
+            $( ".displayForRotateMessage" ).css( "visibility", "hidden");
+            $( ".hideForRotateMessage" ).css( "visibility", "visible");
+        }else{
+            $( ".displayForRotateMessage" ).css( "visibility", "visible");
+            $( ".hideForRotateMessage" ).css( "visibility", "hidden");
+        }
+    }
+    //# sourceURL=/section.tpl.html
+</script>
+<div class="slide" id="slide0" data-anchor="home" /></div>
+<div class="slide" id="slide1" data-anchor="about"/></div>
+<div class="slide" id="slide2" data-anchor="mission"></div>
+<div class="slide" id="slide3" data-anchor="bookFestival"></div>
+<div class="slide" id="slide4" data-anchor="contact"></div>

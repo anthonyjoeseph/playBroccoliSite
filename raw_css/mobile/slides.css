@@ -1,0 +1,81 @@
+
+/*Adding background for the slides
+* --------------------------------------- */
+#slide0{
+  background-image: url(../images/landing/background.png);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 165, 22);
+  padding: 0 0 0 0;
+}
+
+#slide1{
+}
+#slide2{
+  background-image: url(../images/mission/background.png);
+  background-size: auto 100%;
+  background-position: center;
+  padding: 0 0 0 0;
+
+}
+#slide3{
+  background-image: url(../images/bookFestival/background1.png);
+  background-size: 100% auto;
+  background-position: center;
+  padding: 0 0 0 0;
+}
+#slide4{
+  background-color: rgb(251, 242, 227);
+  padding: 0 0 0 0;
+}
+
+#frontPageBadgeAnchor{
+    position: absolute;
+    top:73%;
+    width:calc(100% / 5);
+}
+
+#frontPageBadgeImage{
+    position: absolute;
+    width: 45%;
+}
+
+.videoWrapper{
+  position:relative;
+  width: 80%;
+  height:40%;
+}
+
+#youtubeVideo{
+  position:relative;
+  top:2%;
+  left:0%;
+  width:100%;
+  height:100%;
+}
+
+.flexBoxContainer{
+    display: flex;
+    height:100%;
+}
+
+#picturesPageContainer{
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#socialMediaContainer{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    height:100%;
+}
+
+.socialMediaItem{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

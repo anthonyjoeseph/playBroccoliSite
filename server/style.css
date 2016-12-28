@@ -1,0 +1,276 @@
+@import url(http://db.onlinewebfonts.com/c/d8dabc37c8fae7c50c75282fe8f6c2fb?family=CoHeadlineW01-Bold);
+
+@font-face {font-family: "CoHeadlineW01-Bold";
+    src: url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.eot");
+    src: url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.eot?#iefix") format("embedded-opentype"),
+        url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.woff2") format("woff2"),
+        url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.woff") format("woff"),
+        url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.ttf") format("truetype"),
+        url("http://db.onlinewebfonts.com/t/d8dabc37c8fae7c50c75282fe8f6c2fb.svg#CoHeadlineW01-Bold") format("svg");
+}
+
+@import url(http://db.onlinewebfonts.com/c/09ac81b561d9a4e2834c7bb4c669cb85?family=CoHeadlineW01-Regular);
+
+@font-face {font-family: "CoHeadlineW01-Regular";
+    src: url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.eot");
+    src: url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.svg#CoHeadlineW01-Regular") format("svg");
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "jaf-domus-titling-web";
+}
+
+.wf-loading {
+    visibility: hidden;
+}
+
+.wf-active, .wf-inactive {
+    visibility: visible;
+}
+
+.logo {
+    width: 15%;
+    min-width: 150px;
+}
+
+.field {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    border-radius: 3px;
+    border: 1px solid #D9D9D9;
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    border-radius: 3px;
+    border: 1px solid #D9D9D9;
+    color: black;
+}
+
+
+
+
+#about-font {
+    font-size: 0.8em;
+}
+
+#festival-font {
+    font-size: 0.8em;
+}
+
+hr {
+    width: auto;
+    margin-left: 200px !important;
+    margin-right: 200px !important;
+    text-align: center;
+}
+
+.contacthr{
+    width: auto !important;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+    text-align: center;
+}
+
+body {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    font-family: "jaf-domus-titling-web";
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+    color:#fff;
+    padding: 10px;
+}
+
+ul {
+    list-style-type:none;
+    margin: 0;
+}
+
+li {
+    display:inline;
+    font-family: "jaf-domus-titling-web";
+}
+
+#navbar {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 60%;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbar-inverse {
+    float: left;
+    left: 20%;
+    /*
+    margin: 0;
+    margin-left: 20%;
+    */
+}
+
+.navbar-inverse.navbar-right:last-child {
+    margin-right: -15px;
+    margin-left: 0;
+}
+
+
+.navbar > li > a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    text-align: center;
+    font-family: "jaf-domus-titling-web";
+}
+
+.navbar-inverse {
+    /*background:transparent;*/
+    background:rgba(48,48,48,1);
+    border-style: none;
+
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+    color:#f15a24;
+    font-family: "jaf-domus-titling-web";
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: "jaf-domus-titling-web";
+}
+
+.navbar-inverse .navbar-nav {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+
+.navbar-inverse .navbar-nav > .active > a{
+    color: #f15a24;
+    /*    background: transparent;*/
+    box-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > .active{
+    color: #f15a24;
+    /*    background: transparent;*/
+    box-shadow: none;
+}
+
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+    /*    background: transparent;*/
+    color:#f15a24;
+}
+.navbar-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.h4 {
+    float: left;
+}
+
+
+/*
+iframe{
+    position: fixed;
+    top: 10%;
+    width: 50%;
+    max-width: 750px;
+    left: 44.85%;
+    height: 50%;
+    min-height: 50px;
+}
+*/
+
+
+iframe {
+    width: 100%;
+    max-width: 750px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+    min-height: 450px;
+}
+
+
+@media (min-width: 768px) {
+    p {
+        color: white;
+        font-size:1.7em;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 800px) {
+    p {
+        color: white;
+        font-size:1.7em;
+    }
+}
+
+/*
+ Large devices (large desktops, 1200px and up)
+@media (min-width: 800px) {
+    p {
+        color: white;
+        font-size:1.7em;
+    }
+}
+*/
+
+.col-sm-6 p {
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+
+.sample {
+    padding: 20px;
+    font-weight: 700;
+}
+
+
+.footer p {
+    font-size: 0.75em;
+}

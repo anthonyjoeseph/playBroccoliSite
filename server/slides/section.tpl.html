@@ -1,0 +1,24 @@
+<script>
+  $(function(){
+    $('#fullpage').fullpage({
+        anchors: ['main'],
+        autoScrolling: false,
+        scrolloverflow:true
+    });
+
+    //load slides
+    $('#slide0').load('slides/slide0.tpl.html');
+    $('#slide1').load('slides/slide1.tpl.html');
+    $('#slide2').load('slides/slide2.tpl.html');
+    $('#slide3').load('slides/slide3.tpl.html');
+
+    $('#closeButton').click(function(){
+        $("#closableForeground").hide();
+    });
+  });
+  //# sourceURL=/slides/section.tpl.html
+</script>
+<div class="slide" id="slide0"/></div>
+<div class="slide" id="slide1" data-anchor="about"></div>
+<div class="slide" id="slide2" data-anchor="bookfestival"></div>
+<div class="slide" id="slide3" data-anchor="contact"></div>
