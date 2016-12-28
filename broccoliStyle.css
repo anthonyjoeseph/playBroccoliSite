@@ -1,0 +1,247 @@
+
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 4.0em;
+        font-family: "CoHeadlineW01-Bold";
+        color: black;
+        margin:0;
+        padding:0;
+        text-align: left;
+    }
+
+    h2{
+        font-size: 1.5em;
+        font-family: "CoHeadlineW01-Regular";
+        color: black;
+        margin:10;
+        padding:0;
+        text-align: left;
+    }
+
+
+    .videoWrapper{
+        position:relative;
+        top:2%;
+    }
+
+    #youtubeVideo{
+        position:relative;
+        /*                top:20%;*/
+        left:0%;
+        width:100%;
+        height:auto;
+    }
+
+
+
+    /*
+
+    video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-62.50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+    }
+    */
+
+    /*
+    iframe {
+    position: fixed;
+    top: 10%;
+    width: 50%;
+    max-width: 750px;
+    left: 45%;
+    height: 50%;
+    min-height: 50px;
+    }
+    */
+
+    videoContainer{
+
+
+        width: 300px;
+        height: 600px;
+    }
+
+    iframe{
+        position: relative;
+        width: 50%;
+        height: 200%;
+        /*
+        position: fixed;
+        top: 10%;
+        width: 50%;
+        max-width: 750px;
+        left: 44.85%;
+        height: 50%;
+        */
+        /*                min-height: 50px;*/
+    }
+
+
+    #btnContainer{
+        position: relative;
+        left: 20%;
+    }
+
+    #sampleSubtitle{
+        font-size: 1.25vw;
+        font-weight: bold;
+        font-family: "CoHeadlineW01-Bold";
+    }
+
+    .btn {
+        font-size: 1.5vw;
+        font-weight: bold;
+        font-family: "CoHeadlineW01-Bold";
+        font-weight: 700;
+        letter-spacing: 0px;
+        width: 22%;
+        /*                min-width: 300px;*/
+    }
+
+    .btn-default {
+        background: transparent !important;
+        color: black;
+        white-space:normal;
+        padding: 20px 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border: 3px solid black;
+        border-radius: 30px;
+    }
+
+    .btn-default:hover {
+        background: orange !important;
+        color: white;
+        white-space: normal;
+        padding: 20px 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border: 3px solid white;
+        border-radius: 30px;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+        overflow: hidden;
+    }
+
+    /* Layer with position absolute in order to have it over the video
+    * --------------------------------------- */
+    /*
+    #section0 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 43%;
+    }
+    */
+
+    /* Backgrounds will cover all the section
+    * --------------------------------------- */
+    .section{
+        background-size: cover;
+    }
+
+    .slide{
+        background-size: cover;
+    }
+
+    /* Defining each section background and styles
+    * --------------------------------------- */
+    #section1{
+        /*
+        background-image: url(images/home.png);
+        padding: 0 0 0 0;
+        */
+    }
+
+    #section3 h1{
+        color: #000;
+    }
+
+    /*Adding background for the slides
+    * --------------------------------------- */
+    #slide0{
+        background-image: url(images/starBackground.png);
+        padding: 0 0 0 0;
+    }
+    #slide1{
+        background-image: url(images/about.png);
+        padding: 0 0 0 0;
+
+    }
+    #slide2{
+        background-image: url(images/book.png);
+        padding: 0 0 0 0;
+    }
+    #slide3{
+        background-image: url(images/starBackground.png);
+        padding: 0 0 0 0;
+    }
+    #slide4{
+        background-image: url(images/contact/background.png);
+        padding: 0 0 0 0;
+    }
+
+    /*Positioning relative to center, rather than top left. Cross-browser compatible*/
+    .centerAnchorPoint{
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .topRightAnchorPoint{
+      -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+      transform: translate(-100%, -50%);
+    }
+
+    #closableForeground{
+      position:absolute;
+      left:10%;
+      height:100%;
+      width:20%;
+      background-color:rgba(0, 0, 0, 0.5);
+    }
+
+    #frontPagePlayLogoAnchor{
+      position: absolute;
+      width:100%;
+      top:28%;
+      left:0%;
+    }
+    #frontPagePlayLogoImage{
+      position: absolute;
+      width:57%;
+    }
+
+    #newReleasePoster{
+       position: absolute;
+       height:90%;
+       top:54%;
+       left:50%;
+    }
+
+    #closeButton{
+      position: absolute;
+      border: none;
+      height:4.5%;
+      top:-45%;
+      left:42%;
+      background-color: rgba(0, 0, 0, 0);
+    }
