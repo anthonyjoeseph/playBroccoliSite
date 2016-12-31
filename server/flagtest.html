@@ -5,6 +5,7 @@
 <!--live reload-->
 <script src="//localhost:35729/livereload.js"></script>
 
+<script type="text/javascript" src="js/js.cookie.js"></script>
 <script type="text/javascript" src="js/voteCount.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -26,6 +27,7 @@
         alert(JSON.stringify(err));
       }
     );
+    updateHasVoted();
     $('.flagItem').each(function(index){
       $(this).click(function(){
         var country = $(this).attr('id');
@@ -35,12 +37,23 @@
     $('input[type=button]').click(function(){
       castVote(sqlQueries[selectedCountry],
         function(voteData){
+          Cookies.set('hasVoted', 'value', { expires: 10000, path: '' });
+          updateHasVoted();
           updateVotes(voteData);
         },
         function(err){
           alert(JSON.stringify(err));
         });
     });
+
+    function updateHasVoted(){
+      var cookieData = Cookies.get('hasVoted');
+      if(cookieData){
+        $('#hasVotedText').text("You've voted already");
+      }else{
+        $('#hasVotedText').text("You haven't voted yet");
+      }
+    }
 
     function updateVotes(voteData){
       for(var index in voteData){
@@ -80,6 +93,7 @@
   </div>
   <img id="selectedFlag">
   <input type="button" value="vote">
+  <span id="hasVotedText"></span>
 </body>
 
 </html>
