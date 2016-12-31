@@ -1,0 +1,85 @@
+<html>
+
+<link rel="stylesheet" type="text/css" href="css/flags.css" />
+
+<!--live reload-->
+<script src="//localhost:35729/livereload.js"></script>
+
+<script type="text/javascript" src="js/voteCount.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script>
+  var sqlQueries = {
+    "korea" : "KOREA",
+    "usa" : "USA",
+    "france" : "FRANCE",
+    "spain" : "SPAIN"
+  };
+  $(function(){
+    var selectedCountry = "";
+    selectFlag("usa");
+    getVoteData(
+      function(voteData){
+        updateVotes(voteData);
+      },
+      function(err){
+        alert(JSON.stringify(err));
+      }
+    );
+    $('.flagItem').each(function(index){
+      $(this).click(function(){
+        var country = $(this).attr('id');
+        selectFlag(country);
+      });
+    });
+    $('input[type=button]').click(function(){
+      castVote(sqlQueries[selectedCountry],
+        function(voteData){
+          updateVotes(voteData);
+        },
+        function(err){
+          alert(JSON.stringify(err));
+        });
+    });
+
+    function updateVotes(voteData){
+      for(var index in voteData){
+        var countryElementID = "#" + voteData[index]["COUNTRY"] + "Text";
+        var numVotes = voteData[index]["NUM_VOTES"];
+        $(countryElementID).text(numVotes);
+      }
+    }
+
+    function selectFlag(country){
+      if(selectedCountry !== country){
+        selectedCountry = country;
+        var newSrc = 'flags/' + country + '.gif';
+        $("#selectedFlag").attr('src', newSrc);
+      }
+    }
+  });
+</script>
+
+<body>
+  <div id="flagContainer">
+    <div class="countryContainer">
+      <img src="flags/usa.gif" class="flagItem" id="usa"/>
+      USA: <span id="USAText"></span>
+    </div>
+    <div class="countryContainer">
+      <img src="flags/france.gif" class="flagItem" id="france"/>
+      France: <span id="FranceText"></span></div>
+    <div class="countryContainer">
+      <img src="flags/spain.gif" class="flagItem" id="spain"/>
+      Spain: <span id="SpainText"></span>
+    </div>
+    <div class="countryContainer">
+      <img src="flags/korea.gif" class="flagItem" id="korea"/>
+      Korea: <span id="KoreaText"></span>
+    </div>
+  </div>
+  <img id="selectedFlag">
+  <input type="button" value="vote">
+</body>
+
+</html>

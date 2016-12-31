@@ -1,0 +1,22 @@
+<html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/js.cookie.js"></script>
+
+<script>
+  $(function(){
+    //Cookies.set('hasVoted', 'value', { expires: 10000, path: '' });
+    var cookieData = Cookies.get('hasVoted');
+    if(cookieData){
+      $('body').append('has cookie bro!');
+    }else{
+      $('body').append('no cookie');
+    }
+  });
+</script>
+
+<body>
+
+</body>
+
+</html>

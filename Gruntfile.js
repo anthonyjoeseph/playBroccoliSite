@@ -5,6 +5,7 @@ module.exports = function (grunt) {
 		    files: {
 			       'server/css/general.css': 'raw_css/desktop/general.css',
 			       'server/css/slides.css': 'raw_css/desktop/slides.css',
+			       'server/css/flags.css': 'raw_css/desktop/flags.css',
 			       'server/mobile/css/general.css': 'raw_css/mobile/general.css',
 			       'server/mobile/css/slides.css': 'raw_css/mobile/slides.css',
              'fullpageTest/testCSS.css' : 'raw_css/testCSS.css'
@@ -16,8 +17,10 @@ module.exports = function (grunt) {
 		    livereload:true,
 		},
 		styles: {
-		    files: ['raw_css/desktop/general.css',
+		    files: [
+          'raw_css/desktop/general.css',
 			    'raw_css/desktop/slides.css',
+			    'raw_css/desktop/flags.css',
 			    'raw_css/mobile/general.css',
 			    'raw_css/mobile/slides.css',
 			    'server/index.html',

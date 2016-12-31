@@ -1,0 +1,18 @@
+#flagContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.flagItem{
+  width:100;
+}
+#selectedFlag{
+  width:100;
+}
+
+.countryContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
