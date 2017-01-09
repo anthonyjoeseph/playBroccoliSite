@@ -11,8 +11,22 @@
 }
 
 .countryContainer{
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
+}
+
+#suggestionContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.suggestionHeader{
+  font-size: 30;
+}
+
+.suggestionElement{
+  font-size: 20;
 }

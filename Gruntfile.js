@@ -7,8 +7,7 @@ module.exports = function (grunt) {
 			       'server/css/slides.css': 'raw_css/desktop/slides.css',
 			       'server/css/flags.css': 'raw_css/desktop/flags.css',
 			       'server/mobile/css/general.css': 'raw_css/mobile/general.css',
-			       'server/mobile/css/slides.css': 'raw_css/mobile/slides.css',
-             'fullpageTest/testCSS.css' : 'raw_css/testCSS.css'
+			       'server/mobile/css/slides.css': 'raw_css/mobile/slides.css'
 		    }
 		}
 	    },
@@ -24,8 +23,7 @@ module.exports = function (grunt) {
 			    'raw_css/mobile/general.css',
 			    'raw_css/mobile/slides.css',
 			    'server/index.html',
-          'server/mobile/index.html',
-          'raw_css/testCSS.css'
+          'server/mobile/index.html'
         ],
 		    tasks: ['autoprefixer']
 		}

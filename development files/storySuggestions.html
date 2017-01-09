@@ -1,0 +1,55 @@
+<html>
+
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/submitSuggestion.js"></script>
+
+    <!--live reload-->
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <script>
+      $(function(){
+        $( "#suggestionButton" ).click(function() {
+          var country = $("#countryField").val();
+          var suggestion = $("#suggestionField").val();
+          if(country && suggestion){
+            submitSuggestion(country, suggestion,
+              function(){
+                alert("success!");
+              },
+              function(err){
+                alert(JSON.stringify(err));
+              }
+            );
+          }
+        });
+      });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/flags.css" />
+  </head>
+
+  <body>
+    <div id="suggestionContainer">
+      <div class="suggestionHeader">
+        Suggesions for Stories:
+      </div>
+      <div class="suggestionElement">
+        Country of origin:
+      </div>
+      <div class="suggestionElement">
+        <input type="text" id="countryField"/>
+      </div>
+      <div class="suggestionElement">
+        Suggestion:
+      </div>
+      <div class="suggestionElement">
+        <textarea id="suggestionField"></textarea>
+      </div>
+      <div class="suggestionElement">
+        <input type="button" id="suggestionButton" value="send" />
+      </div>
+    </div>
+  </body>
+
+</html>

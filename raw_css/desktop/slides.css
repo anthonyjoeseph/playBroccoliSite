@@ -1,19 +1,19 @@
 /*Adding background for the slides
 * --------------------------------------- */
-#slide1{
+#about{
     background-image: url(../images/about/background.png);
     background-size: cover;
     background-position: center;
     background-color: rgb(117, 197, 150);
     padding: 0 0 0 0;
 }
-#slide2{
+#bookFestival{
     background-image: url(../images/bookFestival/background.png);
     background-size: cover;
     background-position: center;
     padding: 0 0 0 0;
 }
-#slide3{
+#contact{
   background-color: rgb(251, 242, 228);
   padding: 0 0 0 0;
 }

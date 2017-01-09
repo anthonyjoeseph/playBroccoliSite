@@ -1,7 +1,7 @@
 
 /*Adding background for the slides
 * --------------------------------------- */
-#slide0{
+#landing{
   background-image: url(../images/landing/background.png);
   background-size: auto 100%;
   background-position: center;
@@ -10,22 +10,22 @@
   padding: 0 0 0 0;
 }
 
-#slide1{
+#about{
 }
-#slide2{
+#mission{
   background-image: url(../images/mission/background.png);
   background-size: auto 100%;
   background-position: center;
   padding: 0 0 0 0;
 
 }
-#slide3{
+#bookFestival{
   background-image: url(../images/bookFestival/background1.png);
   background-size: 100% auto;
   background-position: center;
   padding: 0 0 0 0;
 }
-#slide4{
+#contact{
   background-color: rgb(251, 242, 227);
   padding: 0 0 0 0;
 }
