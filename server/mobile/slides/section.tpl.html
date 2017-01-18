@@ -6,7 +6,12 @@
             autoScrolling: false,
             verticalCentered: false,
             scrollOverflow: true,
-            controlArrows: false
+            controlArrows: false,
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+              if(slideIndex == 0){
+                $('#myVideo').get(0).play();
+              }
+            }
         });
 
         //load slides

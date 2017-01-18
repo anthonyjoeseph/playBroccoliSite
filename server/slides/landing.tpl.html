@@ -1,18 +1,20 @@
-<script>
-  $(function(){
-    $("#homepage-poster-yellow-container").click(function() {
-      window.location = "https://play.google.com/store/apps/details?id=com.broccoli.millstone&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1";
-      return false;
-    });
-  });
-</script>
-<div id="homepage-center">
-  <div id="homepage-poster-container">
-    <div id="homepage-poster-redblue-container">
-      <img id="homepage-poster-redblue-image" src="images/home/freeBookRedBlue.png">
-    </div>
-    <div id="homepage-poster-yellow-container">
-      <img id="homepage-poster-yellow-image" src="images/home/freeBookYellow.png">
-    </div>
-  </div>
+<style>
+  #myVideo{
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    background-image: /* our video */;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+  }
+</style>
+<div style="width:100%; height:100%;">
+  <video id="myVideo" loop muted autoplay>
+      <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
 </div>

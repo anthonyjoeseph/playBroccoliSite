@@ -1,10 +1,6 @@
+<script src="js/jquery.vide.min.js"></script>
 <script>
   $(function(){
-    $('#fullpage').fullpage({
-        anchors: ['main'],
-        autoScrolling: false,
-        scrolloverflow:true
-    });
 
     //load slides
     $('#landing').load('slides/landing.tpl.html');
@@ -12,13 +8,28 @@
     $('#bookFestival').load('slides/bookFestival.tpl.html');
     $('#contact').load('slides/contact.tpl.html');
 
-    $('#closeButton').click(function(){
-        $("#closableForeground").hide();
+    $('#fullpage').fullpage({
+        anchors: ['main'],
+        autoScrolling: false,
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+          if(slideIndex == 0){
+            $('#myVideo').get(0).play();
+          }
+        }
     });
+    $(window).on('resize', function(){
+      waitForFinalEvent(
+        function(){
+          playLandingVideo();
+          console.log("restarted after resize");
+        }, 500, "video-resize-ID"
+      );
+    });
+
   });
   //# sourceURL=/slides/section.tpl.html
 </script>
-<div class="slide" id="landing"/></div>
+<div class="slide" id="landing"></div>
 <div class="slide" id="about" data-anchor="about"></div>
 <div class="slide" id="bookFestival" data-anchor="bookfestival"></div>
 <div class="slide" id="contact" data-anchor="contact"></div>

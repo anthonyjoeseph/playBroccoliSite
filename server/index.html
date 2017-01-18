@@ -57,8 +57,11 @@
       </script>
       <script type="text/javascript">
         $(function() {
-            //load section
-            $('#section0').load('slides/section.tpl.html');
+          $.ajaxSetup ({
+              cache: false
+          });
+          //load section
+          $('#section0').load('slides/section.tpl.html');
         });
       </script>
   </head>
