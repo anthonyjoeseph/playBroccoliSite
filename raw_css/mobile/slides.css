@@ -30,15 +30,19 @@
   padding: 0 0 0 0;
 }
 
-#frontPageBadgeAnchor{
-    position: absolute;
-    top:73%;
-    width:calc(100% / 5);
+#landingContainer{
+  display:flex;
+  height:100%;
+  flex-flow:column;
+  justify-content:flex-end;
+  align-items:stretch;
 }
 
-#frontPageBadgeImage{
-    position: absolute;
-    width: 45%;
+#landingBottom{
+  display:flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .videoWrapper{
